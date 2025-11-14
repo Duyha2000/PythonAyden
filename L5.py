@@ -184,11 +184,11 @@ For loop
 """
 s = input("")
 result =""
-for i in range(0,len(s)):
-    if s[i] == " ":
+for i in s:
+    if i == " ":
         result += "-"
     else:
-        result += s[i]    
+        result += i
 print(result)
 
 
