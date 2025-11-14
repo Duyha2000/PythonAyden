@@ -91,11 +91,105 @@ Task: Reverse the string using for loop.
 Example Input:
 s =
 "banana"
+ 012345
 Example Output:
 "ananab"
-"""
-x = input("")
+ 543210
+x = input("") # banana
+for i in range(len(x)-1,0-1,-1):
+    print(x[i],end="")
+ 
+4. Remove the First Occurrence of a Substring
+Task: Remove only the first occurrence of sub in s using find().
+Example Input: 
+s = "one and one and one"
+sub = "one"
+Example Output:
+" and one and one"
+x = input("") # one and one and one
+result =""
+sub = x.find("and") # return the first index: 4
+#print(sub)
+for i in range(sub, len(x)):
+    result += x[i]
+print(result)
 
+5. Remove the Last Occurrence of a Substring
+Task: Remove only the last occurrence using rfind().
+Example Input:
+s = "stop nonstop and| stop|"
+sub = "stop"
+Example Output:
+"stop nonstop and "
+x = input("")
+result = ""
+y = x.rfind("stop") # last index: 17
+for i in range(0,y-1):
+    result += x[i]
+print(result)
+6. Uppercase Only the First Character
+Task: Convert only the first character to 'uppercase' (no capitalize() allowed).
+Example Input:
+s =
+"python"
+Example Output:
+"Python"
+x = input("")
+y = x[0].upper()
+z = ""
+for i in range(1,len(x)):
+    z += x[i]
+print(y + z)
+8. Repeat the First Two Characters Three Times
+Task: Make a new string by repeating 'the first two characters' 3 times, then adding the
+original string.
+Example Input:
+s = "Hello"
+Example Output:
+"HeHeHeHello"
+s = input("") # he'llo'
+x = (s[0] + s[1]) * 4 # hehehe
+# For loop again:
+y = ""
+for i in range(2,len(s)):
+    y += s[i]
+print(x+ y)
+
+9. Extract Username from Email
+Task: Extract everything before "@".
+Example Input:
+s =
+"alice23@gmail.com"
+Example Output:
+"alice23"
+Hint: find()
+s = input("")
+x = s.find('@')
+
+print(x) # 7
+result = ""
+for i in range(0, x):
+    result += s[i]
+print(result)
+
+10. Join Words with a Dash
+Task: Convert a space-separated string into a dash-separated one
+Example Input:
+s =
+"Python is fun"
+Example Output:
+"Python-is-fun"
+Hint: replace 
+For loop 
+"""
+s = input("")
+result =""
+for i in range(0,len(s)):
+    if s[i] == " ":
+        result += "-"
+    else:
+        result += s[i]    
+print(result)
 
 
 
